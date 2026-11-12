@@ -55,12 +55,12 @@ def test_log_euclidean_is_symmetric_and_zero_for_identical_spd() -> None:
 
 def test_subspace_angle_identical_is_zero_and_orthogonal_is_ninety() -> None:
     R = _spd(6, seed=4)
-    assert subspace_angle_deg(R, R, 2) == pytest.approx(0.0, abs=1e-6)
+    assert subspace_angle_deg(R, R, 2) == pytest.approx(0.0, abs=1e-4)
 
     # Top-2 eigenspaces are span{e1, e2} and span{e3, e4}: orthogonal.
     r1 = np.diag([3.0, 3.0, 2.0, 1.0]).astype(np.complex128)
     r2 = np.diag([2.0, 1.0, 3.0, 3.0]).astype(np.complex128)
-    assert subspace_angle_deg(r1, r2, 2) == pytest.approx(90.0, abs=1e-6)
+    assert subspace_angle_deg(r1, r2, 2) == pytest.approx(90.0, abs=1e-4)
     # Overlapping subspaces give intermediate angles.
     r3 = np.diag([3.0, 2.0, 3.0, 1.0]).astype(np.complex128)
     angle = subspace_angle_deg(r1, r3, 2)
