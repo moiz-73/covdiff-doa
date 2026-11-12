@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "covdiff: diffusion models at the covariance-matrix level"
+abstract: >-
+  Reproducible baselines, a structural audit, and a DDPM prior for denoising
+  sample covariance matrices in direction-of-arrival estimation.
+authors:
+  - family-names: "Siddiq"
+    given-names: "Moiz"
+type: software
+license: MIT
+repository-code: "https://github.com/moiz-73/covdiff-doa"
+keywords:
+  - diffusion models
+  - covariance matrix
+  - direction of arrival
+  - symmetric positive definite
+  - array signal processing
+  - reproducibility
+version: 0.1.0
+date-released: "2026-11-12"
+references:
+  - type: article
+    title: "Diffusion model-based covariance matrix recovery method for DOA estimation"
+    authors:
+      - family-names: "Liu"
+        given-names: "Ke"
+      - family-names: "Cui"
+        given-names: "Hengchen"
+      - family-names: "Wu"
+        given-names: "Haibin"
+    journal: "Signal Processing"
+    volume: 246
+    start: 110606
+    year: 2026
+    doi: "10.1016/j.sigpro.2026.110606"

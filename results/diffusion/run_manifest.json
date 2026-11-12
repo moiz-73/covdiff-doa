@@ -1,0 +1,48 @@
+{
+  "argv": [
+    "--experiments",
+    "recovery",
+    "audit",
+    "--n-mc",
+    "10",
+    "--ddim-steps",
+    "10",
+    "--start-t",
+    "5",
+    "--methods",
+    "raw",
+    "lw",
+    "toeplitz",
+    "eigclip",
+    "ddpm",
+    "--checkpoint",
+    "results\\ddpm.pt",
+    "--no-progress",
+    "--out-dir",
+    "results\\diffusion"
+  ],
+  "experiments": [
+    "recovery",
+    "audit"
+  ],
+  "methods": [
+    "raw",
+    "lw",
+    "toeplitz",
+    "eigclip",
+    "ddpm"
+  ],
+  "n_mc": 10,
+  "seed": 0,
+  "snr_grid": [
+    -20.0,
+    -15.0,
+    -10.0,
+    -5.0,
+    0.0,
+    5.0,
+    10.0,
+    15.0,
+    20.0
+  ]
+}

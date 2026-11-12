@@ -1,0 +1,107 @@
+{
+  "created": "2026-11-12T18:09:26+00:00",
+  "experiments": {
+    "recovery": {
+      "csv": "results\\diffusion\\recovery.csv",
+      "rows": 20,
+      "columns": [
+        "method",
+        "snr_db",
+        "nmse",
+        "nmse_std",
+        "log_euclidean",
+        "log_euclidean_std",
+        "subspace_angle_deg",
+        "subspace_angle_deg_std",
+        "pearson_offdiag",
+        "pearson_offdiag_std",
+        "min_eig",
+        "min_eig_std",
+        "cond",
+        "cond_std",
+        "n_mc"
+      ],
+      "config": {
+        "experiment": "recovery",
+        "array": {
+          "n_sensors": 16,
+          "spacing_ratio": 0.5,
+          "angle_min": -60.0,
+          "angle_max": 60.0,
+          "grid_step_deg": 1.0
+        },
+        "signal": {
+          "n_sources": 2,
+          "snr_db": -10.0,
+          "n_snapshots": 1000,
+          "noise_var": 1.0,
+          "coherent_rho": null,
+          "nonuniform_noise_db": null,
+          "seed": null
+        },
+        "methods": [
+          "ddpm",
+          "eigclip",
+          "lw",
+          "raw",
+          "toeplitz"
+        ],
+        "n_mc": 10,
+        "seed": 0,
+        "checkpoint": "results\\ddpm.pt"
+      }
+    },
+    "audit": {
+      "csv": "results\\diffusion\\audit.csv",
+      "rows": 20,
+      "columns": [
+        "method",
+        "snr_db",
+        "hermitian_defect",
+        "hermitian_defect_std",
+        "toeplitz_defect",
+        "toeplitz_defect_std",
+        "min_eig",
+        "min_eig_std",
+        "max_eig",
+        "max_eig_std",
+        "neg_eig_fraction",
+        "neg_eig_fraction_std",
+        "neg_energy_ratio",
+        "neg_energy_ratio_std",
+        "condition_number",
+        "condition_number_std",
+        "n_mc"
+      ],
+      "config": {
+        "experiment": "audit",
+        "array": {
+          "n_sensors": 16,
+          "spacing_ratio": 0.5,
+          "angle_min": -60.0,
+          "angle_max": 60.0,
+          "grid_step_deg": 1.0
+        },
+        "signal": {
+          "n_sources": 2,
+          "snr_db": -10.0,
+          "n_snapshots": 1000,
+          "noise_var": 1.0,
+          "coherent_rho": null,
+          "nonuniform_noise_db": null,
+          "seed": null
+        },
+        "methods": [
+          "ddpm",
+          "eigclip",
+          "lw",
+          "raw",
+          "toeplitz"
+        ],
+        "n_mc": 10,
+        "seed": 0,
+        "checkpoint": "results\\ddpm.pt"
+      }
+    }
+  }
+}

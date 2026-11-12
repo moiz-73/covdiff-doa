@@ -1,0 +1,32 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Data / artefacts
+results/*.pt
+results/*.npz
+results/*.npy
+checkpoints/
+data/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
