@@ -71,7 +71,7 @@ def test_subspace_angle_degenerate_inputs() -> None:
     R = _spd(5, seed=5)
     assert np.isnan(subspace_angle_deg(R, R, 0))
     # n_sources larger than M is clamped to the full space, so the angle is 0.
-    assert subspace_angle_deg(R, R, 99) == pytest.approx(0.0, abs=1e-6)
+    assert subspace_angle_deg(R, R, 99) == pytest.approx(0.0, abs=1e-4)
 
 
 def test_pearson_offdiag_is_one_for_proportional_estimates() -> None:

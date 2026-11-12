@@ -22,6 +22,7 @@ htmlcov/
 results/*.pt
 results/*.npz
 results/*.npy
+results/**/*.npy
 checkpoints/
 data/
 *.log
